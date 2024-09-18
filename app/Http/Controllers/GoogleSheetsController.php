@@ -78,12 +78,7 @@ class GoogleSheetsController extends Controller
             $params
         );
 
-        \Log::channel('single')->info('Values to Append:', ['values' => $request]);
-        \Log::channel('single')->info('Values to Append:', ['values' => $values]);
-        \Log::channel('single')->info('Google Sheets API Response:', [
-            'result' => $result,
-            'updatedRange' => $result->getUpdates()->getUpdatedRange(),
-        ]);
+        error_log("Values to Append $request");
 
         return response()->json(['success' => true, 'updatedRange' => $result->getUpdates()->getUpdatedRange()]);
     }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Exception;
 use Google_Client;
 use Google_Service_Sheets;
 use Illuminate\Http\Request;
@@ -78,7 +79,7 @@ class GoogleSheetsController extends Controller
             $params
         );
 
-        error_log("Values to Append $request");
+        throw new Exception(implode(",", $values));
 
         return response()->json(['success' => true, 'updatedRange' => $result->getUpdates()->getUpdatedRange()]);
     }

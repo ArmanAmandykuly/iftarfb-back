@@ -79,8 +79,6 @@ class GoogleSheetsController extends Controller
             $params
         );
 
-        throw new Exception($request);
-
         return response()->json(['success' => true, 'updatedRange' => $result->getUpdates()->getUpdatedRange()]);
     }
 

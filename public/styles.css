@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.frame {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.logo {
+    width: 100px;
+    margin: 0 auto 20px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+p {
+    font-size: 18px;
+    color: #666;
+}
+
+label {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input[type="text"], input[type="tel"], textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    background-color: #f1c40f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #d4ac0d;
+}
+
+.stars {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.star {
+    font-size: 24px;
+    color: #ddd;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.star.selected, .star:hover {
+    color: #f1c40f;
+}
+
+.star:hover ~ .star {
+    color: #ddd;
+}
+
+.hidden {
+    display: none;
+}
+
+.next-btn {
+    margin-top: 20px;
+}
+
+/* Медиазапросы для мобильных устройств */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .stars {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    input[type="text"], input[type="tel"], textarea {
+        width: 90%;
+    }
+
+    .star {
+        font-size: 20px;
+        margin: 0 2px;
+    }
+}

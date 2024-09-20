@@ -53,7 +53,7 @@ class GoogleSheetsController extends Controller
         $client = $this->getClient();
         $service = new Google_Service_Sheets($client);
 
-        $columns = array("waiter", "waiter_rate", "service_speed", "food_rate", "comments", "name", "phone_number");
+        $columns = array("waiterName", "ratingWaiter", "ratingService", "ratingFood", "comments", "userName", "phoneNumber");
 
         // Get values to append
         $values = [

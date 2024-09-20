@@ -78,7 +78,7 @@
 
     <!-- Frame 189 -->
     <section class="frame hidden" id="frame-189">
-        <img src="{{url("assets/logo.png")}}" alt="Логотип IFTAR" class="logo">
+        <img src="{{url("logo.png")}}" alt="Логотип IFTAR" class="logo">
         <p>Благодарим за обратную связь! 🙌</p>
     </section>
 

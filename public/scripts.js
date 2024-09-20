@@ -71,7 +71,7 @@ document.querySelectorAll('.stars').forEach(starGroup => {
 
 // Submit feedback data to a REST API
 function submitFeedback() {
-    const apiUrl = 'http://localhost:8000/api'; // Replace with your API endpoint
+    const apiUrl = 'http://iftarfb.kz/api'; // Replace with your API endpoint
 
     fetch(apiUrl, {
         method: 'POST',

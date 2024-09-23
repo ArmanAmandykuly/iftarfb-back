@@ -1,14 +1,24 @@
+/* Общие стили */
 body {
     font-family: Arial, sans-serif;
     background-color: #fff;
     margin: 0;
     padding: 0;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Занимаем всю высоту экрана */
 }
 
 .frame {
+    width: 100%;
+    max-width: 400px;
     padding: 20px;
-    border-bottom: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Центрирует содержимое по вертикали */
+    align-items: center;     /* Центрирует содержимое по горизонтали */
+    min-height: 100vh;       /* Заставляет контейнер занять всю высоту экрана */
 }
 
 .logo {
@@ -92,7 +102,20 @@ button:hover {
 /* Медиазапросы для мобильных устройств */
 @media only screen and (max-width: 600px) {
     body {
-        font-size: 16px;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .frame {
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Центрирует содержимое по вертикали */
+        align-items: center;     /* Центрирует содержимое по горизонтали */
+        min-height: 100vh;       /* Высота равна высоте экрана */
     }
 
     h1 {

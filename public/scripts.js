@@ -65,9 +65,22 @@ document.querySelectorAll('.stars').forEach(starGroup => {
 
             // Set hidden input value
             document.getElementById(hiddenInputId).value = ratingValue;
+            
+            updateStars(this.id, ratingValue)
         }
     });
 });
+
+function updateStars(id, value) {
+    const stars = document.querySelectorAll(`#${id} .star`);
+    stars.forEach(star => {
+        if (star.getAttribute('data-value') <= value) {
+            star.classList.add('selected');
+        } else {
+            star.classList.remove('selected');
+        }
+    });
+}
 
 // Submit feedback data to a REST API
 function submitFeedback() {
